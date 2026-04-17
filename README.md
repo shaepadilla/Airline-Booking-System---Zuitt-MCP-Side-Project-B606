@@ -1,49 +1,84 @@
-# Airline-Booking-System---Zuitt-MCP-Side-Project-B606
-Airline Booking System - Zuitt MCP Side Project B606
+# ✈️ AIRBOOK PH
 
-# AIRBOOK Local Starter
+### Technical Specification Document (TSD)
 
-Monorepo starter with:
-- Frontend: Next.js App Router
-- Backend: Express + MongoDB + JWT auth
-- Local setup only (no Docker)
+**Version 1.2 --- April 15, 2026**
 
-## Structure
-- `frontend/` Next.js UI with login/register and protected dashboard
-- `backend/` Express API with auth only
+------------------------------------------------------------------------
 
-## Prerequisites
-- Node.js 20+
-- npm 10+
-- MongoDB local or MongoDB Atlas
+## 📌 Project Overview
 
-## Run locally
+AIRBOOK PH is a full-stack web-based airline booking system for guests,
+users, and admins.
 
-### 1. Backend
-```bash
-cd backend
-npm install
-cp .env.example .env
-npm run dev
-```
+------------------------------------------------------------------------
 
-### 2. Frontend
-```bash
-cd frontend
-npm install
-cp .env.example .env.local
-npm run dev
-```
+## 🛠️ Tech Stack
 
-## Default API
-- Frontend: http://localhost:3000
-- Backend: http://localhost:4000
+### Frontend
 
-## Auth endpoints
-- `POST /api/auth/register`
-- `POST /api/auth/login`
-- `GET /api/auth/me`
+-   Next.js
+-   React
+-   CSS Modules
+-   Axios
 
-## Notes
-- This is intentionally blank/minimal beyond authentication so your team can build modules cleanly.
-- No Docker files included.
+### Backend
+
+-   Node.js
+-   Express.js
+-   MongoDB (Mongoose)
+-   JWT
+-   Bcrypt
+
+------------------------------------------------------------------------
+
+## 🎯 Core Features
+
+-   Authentication & Authorization
+-   Flight Search
+-   Seat Hold System
+-   Booking System
+-   Payment Processing
+-   Ticket Generation
+-   Booking Checker
+-   Admin Dashboard
+-   Audit Logging
+
+------------------------------------------------------------------------
+
+## ⚙️ Functional Requirements
+
+-   User authentication and role-based access
+-   Flight discovery and booking
+-   Seat reservation and locking
+-   Payment processing
+-   Admin CRUD operations
+
+------------------------------------------------------------------------
+
+## 🧑‍💼 Admin Endpoints
+
+    GET    /admin/flights
+    POST   /admin/flights
+    PATCH  /admin/flights/:id
+    DELETE /admin/flights/:id
+
+    GET    /admin/bookings
+    PATCH  /admin/bookings/:id
+    DELETE /admin/bookings/:id
+
+    GET    /admin/users
+    PATCH  /admin/users/:id
+    DELETE /admin/users/:id
+
+    GET    /admin/payments
+    POST   /admin/payments/:id/refund
+
+    GET    /admin/audit-logs
+
+------------------------------------------------------------------------
+
+## 📝 Summary
+
+AIRBOOK PH is a scalable airline booking platform with full booking
+lifecycle and admin control.
